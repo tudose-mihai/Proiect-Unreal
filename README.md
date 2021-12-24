@@ -1,6 +1,6 @@
 # Proiect-Unreal
 
-Proiectul are ca scop citirea si modificarea automata a unor variabile la runtime.
+### Proiectul are ca scop citirea si modificarea automata a unor variabile la runtime.
 
 In evenimentul BeginPlay este apelata functia PropertyLogger unde creeam un map de forma:
 " map[nume] = proprietate ".
