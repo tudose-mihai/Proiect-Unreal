@@ -30,8 +30,7 @@ void AMyCharacter::InheritedFuzzer() {
 Ca sa putem inlocui:
 <img width="1031" alt="image" src="https://user-images.githubusercontent.com/32023303/147347800-652e8a54-b546-4365-adda-0dad51c17291.png"> 
 Cu: \
-<img width="229" alt="image" src="https://user-images.githubusercontent.com/32023303/147347845-22c37eb3-84b0-4ac3-a192-a5bf1cc364a5.png">
-
+<img width="224" alt="image" src="https://user-images.githubusercontent.com/32023303/147348034-d1487ef9-fb8d-4b34-8ead-aa638d212d47.png">
 - o librarie existenta pentru manipulare JSON
 - input-uri mai utile in blueprints ( fisierul de citit, fisier de scris )
 - un caracter controlat automat pe un drum simplu, pe care putem folosi clasa Fuzzer (prin click, prin buton dedicat) pentru a ilustra mai clar rezultatul
