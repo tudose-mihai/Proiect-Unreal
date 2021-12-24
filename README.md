@@ -24,11 +24,17 @@ void AMyCharacter::InheritedFuzzer() {
 
 ### Vreau sa adaug:
 
--functionalitate pentru float, string\
--un fel de a accesa proprietati ale proprietatilor (ex: sa accesam "UCharacterMovementComponent*" direct, ca sa nu depindem in blueprints de "SetMaxWalkSpeed"), probabil prin recursivitate\
--o librarie existenta pentru manipulare JSON\
--input-uri mai utile in blueprints ( fisierul de citit, fisier de scris )\
--un caracter controlat automat pe un drum simplu, pe care putem folosi clasa Fuzzer (prin click, prin buton dedicat) pentru a ilustra mai clar rezultatul
+- functionalitate pentru float, string
+- un fel de a accesa proprietati ale proprietatilor (ex: sa accesam "UCharacterMovementComponent*" direct, ca sa nu depindem in blueprints de "SetMaxWalkSpeed"), probabil prin recursivitate 
+
+Ca sa putem inlocui:
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/32023303/147347800-652e8a54-b546-4365-adda-0dad51c17291.png"> 
+Cu: \
+<img width="229" alt="image" src="https://user-images.githubusercontent.com/32023303/147347845-22c37eb3-84b0-4ac3-a192-a5bf1cc364a5.png">
+
+- o librarie existenta pentru manipulare JSON
+- input-uri mai utile in blueprints ( fisierul de citit, fisier de scris )
+- un caracter controlat automat pe un drum simplu, pe care putem folosi clasa Fuzzer (prin click, prin buton dedicat) pentru a ilustra mai clar rezultatul
 
 
 
