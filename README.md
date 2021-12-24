@@ -6,12 +6,14 @@ In evenimentul BeginPlay este apelata functia PropertyLogger unde creeam un map 
 " map[nume] = proprietate ".
 Acest map este umplut iterand prin toate proprietatile obiectului din care a fost apelata functia.
 
-Variabilele tinta sunt scrise intr-un JSON sub forma: "variabila" : [valoare_minima, valoare_maxima], \
-Functia MyFuzzer citeste acest JSON si le parseaza.\
-Variabilele modificate sunt vizibile in-game printr-un mesaj debug.\
+1. variabilele tinta sunt scrise intr-un JSON sub forma: "variabila" : [range_min, range_max], 
+2. functia MyFuzzer citeste acest JSON si le parseaza.
+3. daca se afla in map, dam o valoare random in range. 
+4. variabilele modificate sunt vizibile in-game printr-un mesaj debug.
+
 Momentan functioneaza doar cu valori intregi.
 
-Initial am implementat totul pe o clasa Actor cu intentia de a mosteni catre orice alt obiect ca sa aiba functionalitatea, dar nu imi dau seama daca e usor de facut pe un proiect deja existent.
+Initial am implementat totul pe o clasa Actor cu intentia de a mosteni catre orice alt obiect ca sa aiba functionalitatea, dar nu imi dau seama daca e usor de facut pe un proiect deja existent. \
 Ca urmare, am implementat si o clasa Fuzzer care opereaza identic, dar primeste pointer catre un obiect (deci poate fi apelata de orice obiect).
 ```
 #include "Fuzzer.h"
@@ -25,14 +27,16 @@ void AMyCharacter::InheritedFuzzer() {
 ### Vreau sa adaug:
 
 - functionalitate pentru float, string
-- un fel de a accesa proprietati ale proprietatilor (ex: sa accesam "UCharacterMovementComponent*" direct, ca sa nu depindem in blueprints de "SetMaxWalkSpeed"), probabil prin recursivitate 
+- un fel de a accesa proprietati ale proprietatilor, probabil prin recursivitate; un arbore de proprietati\
+(ex: sa accesam "UCharacterMovementComponent*" direct, ca sa nu depindem in blueprints de "SetMaxWalkSpeed")
 
 Ca sa putem inlocui:
 <img width="1031" alt="image" src="https://user-images.githubusercontent.com/32023303/147347800-652e8a54-b546-4365-adda-0dad51c17291.png"> 
 Cu: \
 <img width="224" alt="image" src="https://user-images.githubusercontent.com/32023303/147348034-d1487ef9-fb8d-4b34-8ead-aa638d212d47.png">
+- un mod de a explora acest arbore de proprietati (ex: fisier cu indentatie pentru ierarhie, filtrare dupa tip)
 - o librarie existenta pentru manipulare JSON
-- input-uri mai utile in blueprints ( fisierul de citit, fisier de scris )
+- input-uri mai utile in blueprints (ex: fisierul de citit, fisier de scris )
 - un caracter controlat automat pe un drum simplu, pe care putem folosi clasa Fuzzer (prin click, prin buton dedicat) pentru a ilustra mai clar rezultatul
 
 
